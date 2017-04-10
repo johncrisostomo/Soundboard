@@ -41,10 +41,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="9lD-tD-3SQ" id="ZfG-gY-H5q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="983" y="139"/>
+            <point key="canvasLocation" x="1343" y="175"/>
         </scene>
         <!--Sound View Controller-->
         <scene sceneID="s9O-Uf-2ze">
@@ -110,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPf-HF-AAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="127.28635682158921"/>
+            <point key="canvasLocation" x="2089" y="175"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rJd-0T-rkX">
