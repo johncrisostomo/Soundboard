@@ -55,5 +55,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sounds.count
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if  editingStyle == .delete {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let sound = sounds[indexPath.row]
+            
+            context.delete(sound)
+            
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            do {
+                sounds = try context.fetch(Sound.fetchRequest())
+                tableView.reloadData()
+            } catch {}
+            
+        }
+    }
 }
 
